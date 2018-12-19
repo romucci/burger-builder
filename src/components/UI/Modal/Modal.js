@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Auxiliar from "../../../hoc/Auxiliar";
+import Backdrop from "../Backdrop/Backdrop";
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -23,7 +25,12 @@ const ModalWrapper = styled.div`
 `;
 
 const modal = props => {
-  return <ModalWrapper show={props.show}>{props.children}</ModalWrapper>;
+  return (
+    <Auxiliar>
+      <ModalWrapper show={props.show}>{props.children}</ModalWrapper>
+      <Backdrop show={props.show} clicked={props.modalClosed} />
+    </Auxiliar>
+  );
 };
 
 export default modal;

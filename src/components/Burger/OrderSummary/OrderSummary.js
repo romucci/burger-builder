@@ -1,6 +1,6 @@
 import React from "react";
 import Auxiliar from "../../../hoc/Auxiliar";
-import Button from '../../UI/Button/Button'
+import Button from "../../UI/Button/Button";
 
 const orderSummary = props => {
   const ingredientSummary = Object.keys(props.ingredients).map(igKey => {
@@ -18,7 +18,7 @@ const orderSummary = props => {
       <ul>{ingredientSummary}</ul>
       <p>Total price: ${props.price.toFixed(2)}USD</p>
       <p>Continue to checkout?</p>
-      <Button cancel>CANCEL</Button>
+      <Button clicked={props.cancelPurchase}>CANCEL</Button>
       <Button confirm>CONTINUE</Button>
     </Auxiliar>
   );

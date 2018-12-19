@@ -1,15 +1,16 @@
 import React from "react";
 import Aux from "../../hoc/Auxiliar";
-import styled from 'styled-components'
+import styled from "styled-components";
+import Toolbar from "../Navigation/Toolbar";
 
 const Main = styled.main`
-  margin-top: 20px
+  margin-top: 56px;
 `;
 
 const Layout = props => {
   return (
     <Aux>
-      <div>Toolbar, Drawer, Backdrop</div>
+      <Toolbar />
       <Main>{props.children}</Main>
     </Aux>
   );

@@ -6,6 +6,8 @@ const checkProps = props => {
     return '#cc5a57';
   } else if (props.confirm) {
     return "#126d2b";
+  } else  {
+    return null
   }
 };
 
@@ -16,8 +18,9 @@ const Button = styled.button`
   width: 100px;
   height: 40px;
   color: ${props => {
-    return props.cancel || props.confirm ? checkProps(props) : "blue";
+      return props.cancel || props.confirm ? checkProps(props) : "blue";
   }}
+  
   background-color: transparent;
   border-radius: 5px;
   border: 1px solid ${props => checkProps(props)};
@@ -29,7 +32,7 @@ const Button = styled.button`
   }
 `;
 
-console.log(Button);
+console.log(Button)
 
 const button = props => {
   return (

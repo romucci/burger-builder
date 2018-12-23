@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom'
 import Auxiliar from "../../hoc/Auxiliar";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
@@ -13,6 +14,9 @@ const INGREDIENT_PRICES = {
 };
 
 class BurgerBuilder extends Component {
+  componentDidMount () {
+    console.log(this.props)
+  }
   state = {
     ingredients: {
       salad: 0,
@@ -101,4 +105,4 @@ class BurgerBuilder extends Component {
   }
 }
 
-export default BurgerBuilder;
+export default withRouter(BurgerBuilder);

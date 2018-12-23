@@ -8,7 +8,7 @@ const BuildControlsWrapper = styled.div`
   flex-flow: column;
   align-items: center;
   margin: auto;
-  padding: 10px 0;
+  padding: 5px 0;
 `;
 
 const BurgerPrice = styled.h3`
